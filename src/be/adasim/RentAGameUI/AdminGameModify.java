@@ -1,5 +1,6 @@
 package be.adasim.RentAGameUI;
 
+import java.awt.Choice;
 import java.awt.EventQueue;
 import java.awt.Font;
 
@@ -9,19 +10,20 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
-import java.awt.Choice;
 
-public class AdminNewGame extends JFrame {
+public class AdminGameModify extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textGameName;
 	private JTextField textFieldCreditCost;
-	
+
+	/**
+	 * Launch the application.
+	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AdminNewGame frame = new AdminNewGame();
+					AdminGameModify frame = new AdminGameModify();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -30,17 +32,20 @@ public class AdminNewGame extends JFrame {
 		});
 	}
 
-	public AdminNewGame() {
+	/**
+	 * Create the frame.
+	 */
+	public AdminGameModify() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1280, 720);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		setTitle("Ajouter un jeu {AdminNewGame}"); // TODO delete indication
+		setTitle("Liste des jeux {AdminGameModify}"); // TODO delete indication
 		JFrame instance = this;
 		
-		JLabel lblNewLabel = new JLabel("Ajouter un jeu - Administrateur");
+		JLabel lblNewLabel = new JLabel("Modifier jeu - Administrateur");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 40));
 		lblNewLabel.setBounds(325, 11, 548, 65);
 		contentPane.add(lblNewLabel);
@@ -60,11 +65,6 @@ public class AdminNewGame extends JFrame {
 		lblPrixEnCrdit.setBounds(325, 216, 175, 42);
 		contentPane.add(lblPrixEnCrdit);
 		
-		textGameName = new JTextField();
-		textGameName.setColumns(10);
-		textGameName.setBounds(454, 116, 211, 38);
-		contentPane.add(textGameName);
-		
 		textFieldCreditCost = new JTextField();
 		textFieldCreditCost.setColumns(10);
 		textFieldCreditCost.setBounds(454, 216, 211, 38);
@@ -75,13 +75,20 @@ public class AdminNewGame extends JFrame {
 		btnBack.setBounds(10, 597, 204, 73);
 		contentPane.add(btnBack);
 		
-		Choice choice = new Choice();
-		choice.setBounds(454, 163, 211, 42);
-		contentPane.add(choice);
-		
 		JButton btnAdd = new JButton("Ajouter");
 		btnAdd.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		btnAdd.setBounds(1050, 597, 204, 73);
 		contentPane.add(btnAdd);
+		
+		JLabel lblconsole = new JLabel("{CONSOLE}");
+		lblconsole.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblconsole.setBounds(454, 163, 131, 42);
+		contentPane.add(lblconsole);
+		
+		JLabel lblnomdujeu = new JLabel("{NOMDUJEU}");
+		lblnomdujeu.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblnomdujeu.setBounds(454, 110, 131, 42);
+		contentPane.add(lblnomdujeu);
 	}
+
 }

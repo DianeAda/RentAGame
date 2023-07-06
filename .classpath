@@ -23,5 +23,6 @@
 	<classpathentry kind="lib" path="C:/Users/DIANE/Desktop/PROJETJAVA/code/RentAGame/lib/hsqldb-2.5.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DIANE/Desktop/PROJETJAVA/code/RentAGame/lib/jackcess-3.0.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DIANE/Desktop/PROJETJAVA/code/RentAGame/lib/ucanaccess-5.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DIANE/Desktop/PROJETJAVA/code/RentAGame/lib/jcalendar-1.1.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
